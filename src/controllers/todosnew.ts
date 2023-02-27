@@ -2,6 +2,7 @@ import { RequestHandler } from "express";
 
 import Todonew, { TodoModel } from "../models/todosnew";
 
+// Post Data Backend Controller Function
 export const createToDoNew: RequestHandler = async (req, res, next) => {
   try {
     const data: TodoModel = req.body;
@@ -15,6 +16,7 @@ export const createToDoNew: RequestHandler = async (req, res, next) => {
   }
 };
 
+// Get Data Backend Controller Function
 export const getToDoNew: RequestHandler = async (req, res, next) => {
   try {
     var {id} = req.params;
@@ -28,7 +30,7 @@ export const getToDoNew: RequestHandler = async (req, res, next) => {
   }
 };
 
-
+// Update Data Backend Controller Function
 export const updateToDoNew: RequestHandler = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -40,7 +42,7 @@ export const updateToDoNew: RequestHandler = async (req, res, next) => {
     return res.status(500).json({ message: error.message });
   }
 };
-
+// // Delete Data Backend Controller Function
 export const deleteToDoNew: RequestHandler = async (req, res, next) => {
   try {
     const { id } = req.params;

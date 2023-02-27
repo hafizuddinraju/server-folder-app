@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
 import { Model } from "mongoose";
-
+// data model Schema
 type TodoType = TodoModel & mongoose.Document;
 export interface TodoModel {
   title: {

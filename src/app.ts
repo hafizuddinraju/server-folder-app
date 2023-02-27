@@ -22,7 +22,7 @@ app.use('/todosnew', todoNewRoutes)
 app.get('/', (req: Request, res: Response, next: NextFunction)=>{
     res.send("Hello typescript")
 })
-
+// error handle
 app.use((req: Request, res: Response, next: NextFunction)=>{
  next(new createHttpError.NotFound())
 })
